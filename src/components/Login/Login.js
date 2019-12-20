@@ -2,20 +2,44 @@ import React, { Component } from "react";
 import "./Login.css";
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: "",
+      password: ""
+    };
+  }
+  handleUsernameChange = event => {
+    this.setState({
+      username: event.target.value
+    });
+  };
+  handlePasswordChange = event => {
+    this.setState({
+      password: event.target.value
+    });
+  };
+  handleSubmit = event => {
+    alert(`Welcome ${this.state.username}`);
+    event.preventDefault();
+  };
   render() {
     return (
       <div>
         <div id="container">
           <div class="form-wrap">
             <h1>Login</h1>
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div class="form-group">
-                <label for="user-name">User Name</label>
+                <label>User Name</label>
                 <input
                   type="text"
                   name="user-name"
                   id="user-name"
                   placeholder="User Name"
+                  value={this.state.username}
+                  onChange={this.handleUsernameChange}
                 />
               </div>
               <div class="form-group">
@@ -25,6 +49,8 @@ export default class Login extends Component {
                   name="password"
                   id="password"
                   placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handlePasswordChange}
                 />
               </div>
               <button type="submit" class="btn">
