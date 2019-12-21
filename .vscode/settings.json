@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "/Users/sai/.local/share/virtualenvs/tcs-frontend-u1UN9HUe/bin/python"
 }

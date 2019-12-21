@@ -119,7 +119,7 @@ export default class Signup extends Component {
           </div>
           <div>
             <p>
-              Already have an account? <a href="#"> Login Here</a>
+              Already have an account?<a href="#">Login Here</a>
             </p>
           </div>
         </div>
